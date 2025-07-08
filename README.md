@@ -2,7 +2,7 @@
 
 This is the HEB take-home assignment for the Software Engineer II position, completed by Jamal Dabas.
 
-The HEB Pizza App is a single-page application built with Angular and TypeScript. It allows users to log in and place pizza orders through a connected backend API.
+The HEB Pizza App is an application built with Angular and TypeScript. It allows users to log in and place pizza orders through a connected backend API.
 
 The backend/api for this project is provided by HEB here: https://github.com/kylekurihara/order-pizza-api
 
