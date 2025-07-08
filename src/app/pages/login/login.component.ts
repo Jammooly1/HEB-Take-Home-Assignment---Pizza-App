@@ -38,6 +38,9 @@ export class LoginComponent {
     // Call the AuthService to login
     this.auth.login(credentials).subscribe({
       next: (res) => {
+        // JWT access token saved to localStorage
+        localStorage.setItem('token', res.access_token);
+
         // Navigate to /order after successful login
         this.router.navigate(['/order']); // Navigate to order screen
       },

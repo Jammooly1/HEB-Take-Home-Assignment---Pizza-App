@@ -26,6 +26,9 @@ yarn-error.log
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.vscode/
+.idea/
+*.swp
 .history/*
 
 # Angular CLI cache

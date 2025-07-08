@@ -1,8 +1,28 @@
-# PizzaApp
+# HEB Pizza App
 
-This is the HEB take home assignment for the Software Engineer II position done by Jamal Dabas.
+This is the HEB take-home assignment for the Software Engineer II position, completed by Jamal Dabas.
+
+The HEB Pizza App is a single-page application built with Angular and TypeScript. It allows users to log in and place pizza orders through a connected backend API.
+
+The backend/api for this project is provided by HEB here: https://github.com/kylekurihara/order-pizza-api
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+
+## Setup
+
+Ensure you have Node.js (v20.19 or later) and Angular CLI installed globally.
+
+```bash
+git clone https://github.com/Jammooly1/HEB-Take-Home-Assignment-Pizza-App.git
+cd HEB-Take-Home-Assignment-Pizza-App
+```
+
+Install project dependencies:
+
+```bash
+npm install -g @angular/cli # if Angular CLI not installed
+npm install
+```
 
 ## Development server
 
@@ -55,7 +75,3 @@ ng e2e
 ```
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
