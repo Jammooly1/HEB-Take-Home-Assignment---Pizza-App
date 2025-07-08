@@ -1,0 +1,65 @@
+<!-- Pizza ordering form and order list -->
+<div class="order-form">
+  <h2>Place a Pizza Order</h2>
+  <form [formGroup]="orderForm" (ngSubmit)="submitOrder()">
+    <!-- Crust Dropdown -->
+    <label>
+      Crust:
+      <select formControlName="Crust">
+        <option value="" disabled selected>Select Crust</option>
+        <option *ngFor="let crust of crustOptions" [value]="crust">
+          {{ crust }}
+        </option>
+      </select>
+    </label>
+
+    <!-- Flavor Dropdown -->
+    <label>
+      Flavor:
+      <select formControlName="Flavor">
+        <option value="" disabled selected>Select Flavor</option>
+        <option *ngFor="let flavor of flavorOptions" [value]="flavor">
+          {{ flavor }}
+        </option>
+      </select>
+    </label>
+
+    <!-- Size Dropdown -->
+    <label>
+      Size:
+      <select formControlName="Size">
+        <option value="" disabled selected>Select Size</option>
+        <option *ngFor="let size of sizeOptions" [value]="size">
+          {{ size }}
+        </option>
+      </select>
+    </label>
+
+    <!-- Table Number Input -->
+    <label>
+      Table No:
+      <input type="number" formControlName="Table_No" placeholder="Enter Table Number" />
+    </label>
+
+    <button type="submit" [disabled]="orderForm.invalid">Submit Order</button>
+  </form>
+</div>
+
+<div class="orders-list">
+  <h3>Existing Orders</h3>
+  <ul>
+    <li *ngFor="let o of orders" class="order-item">
+      <div class="order-details">
+        <span class="order-flavor">{{ o.Flavor }}</span>
+        <span class="order-size">({{ o.Size }}, {{ o.Crust }})</span>
+        <span class="order-table">at Table <strong>{{ o.Table_No }}</strong></span>
+        <br/>
+        <span>Order Id: {{ o.Order_ID }}</span>
+        <div class="order-timestamp">
+            Placed: {{ o.Timestamp | date:'medium' }}
+        </div>
+      </div>
+      <button class="cancel-btn" (click)="cancelOrder(o.Order_ID)">Cancel</button>
+    </li>
+  </ul>
+</div>

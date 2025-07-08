@@ -1,5 +1,7 @@
 # PizzaApp
 
+This is the HEB take home assignment for the Software Engineer II position done by Jamal Dabas.
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
 
 ## Development server
